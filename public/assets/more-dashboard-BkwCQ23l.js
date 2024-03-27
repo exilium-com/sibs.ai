@@ -1,0 +1,1 @@
+import{_ as o}from"./cards-view.vue_vue_type_script_setup_true_lang-8AkUAvzg.js";import{d as e,c as r,b as a}from"./main-CdmekhyF.js";import"./mermaid-graph.vue_vue_type_style_index_0_lang-wy3G8CGF.js";import"./_commonjsHelpers-Cpj98o6Y.js";const i=e({__name:"more-dashboard",setup(t){return(s,m)=>(a(),r(o,{onlyFavorites:!1}))}});export{i as default};

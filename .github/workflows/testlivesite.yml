@@ -1,0 +1,19 @@
+name: Check Live Site Links
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 5 * * *"
+
+jobs:
+  linkChecker:
+    name: Check links for ${{ matrix.url }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        url: ["https://app.sibs.ai", "https://sibsai.com", "https://www.sibs.ai", "https://www.sibsai.com"]
+    steps:
+      - name: Check internal links
+        uses: filiph/linkcheck@3.0.0
+        with:
+          arguments: "--no-check-anchors --no-show-redirects --connection-failures-as-warnings ${{ matrix.url }}"
